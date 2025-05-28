@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para meu Fernando</title>
+    <style>
+        :root {
+            --dark-bg: #0a0a1a;
+            --deep-purple: #2a0a47;
+            --romantic-pink: #ff2d75;
+            --soft-white: #fff5f9;
+            --gold: #ffd700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark-bg), var(--deep-purple));
+            color: var(--soft-white);
+            min-height: 100vh;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration, 5s) infinite ease-in-out;
+            opacity: var(--opacity, 0.7);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--romantic-pink);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .photo-collage {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px auto;
+            max-width: 500px;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1/1;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .love-message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+    
+        }
+
+        .music-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 600px;
+            color: var(--gold);
+            padding: 0 20px;
+        }
+
+        .song-info {
+            display: block;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: var(--romantic-pink);
+        }
+
+        .special-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--romantic-pink), #ff6b8b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 3px 15px rgba(255, 45, 117, 0.4);
+        }
+
+        .special-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 45, 117, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--soft-white);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .photo-collage {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+            
+            .music-quote {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo com estrelas -->
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <!-- Seção 1: Cabeçalho -->
+        <section>
+            <h1 class="section-title">Feliz Dia dos Namorados</h1>
+
+            <p class="love-message">
+                Meu Fernando, espero que você saiba o quanto é importante para mim.
+                Isso é só um pouco do que posso fazer para demonstrar o meu amor por você.
+                Que este Dia dos Namorados seja só um dos vários que teremos juntos (mesmo comemorando antes da data).
+            </p>
+            <div class="photo-item">
+                    <img src="e:\SISTEMA DE ARMAZENAMENTO\Desktop\Nova pasta\WhatsApp Image 2025-05-12 at 8.46.24 PM (1).jpeg" alt="Nossa foto 1">
+                </div>
+        </section>
+        <!-- Seção 2: Nossas Fotos -->
+        <section>
+            <h2 class="section-title">Momentos </h2>
+            
+            <div class="photo-collage">
+                <!-- Substitua pelas suas fotos (apenas 4) -->
+                <div class="photo-item">
+                    <img src="e:\SISTEMA DE ARMAZENAMENTO\Desktop\Nova pasta\WhatsApp Image 2025-05-12 at 8.46.24 PM.jpeg" alt="Nossa foto 1">
+                </div>
+                <div class="photo-item">
+                    <img src="e:\SISTEMA DE ARMAZENAMENTO\Desktop\Nova pasta\WhatsApp Image 2025-05-12 at 8.46.23 PM (1).jpeg" alt="Nossa foto 2">
+                </div>
+                <div class="photo-item">
+                    <img src="e:\SISTEMA DE ARMAZENAMENTO\Desktop\Nova pasta\WhatsApp Image 2025-05-12 at 8.46.23 PM.jpeg" alt="Nossa foto 3">
+                </div>
+                <div class="photo-item">
+                    <img src="e:\SISTEMA DE ARMAZENAMENTO\Desktop\Nova pasta\WhatsApp Image 2025-05-19 at 8.39.47 PM.jpeg" alt="Nossa foto 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Mensagem e Música -->
+        <section>
+            <h2 class="section-title">Uma pequena carta para o meu Fernando</h2>
+            
+            <p class="love-message">
+Fernando, espero que você saiba o quanto eu te amo.<br>
+Mesmo com tudo o que anda acontecendo, você é quem me alegra diariamente (mesmo às vezes sendo o motivo da raiva ou do choro). <br>
+Quero demonstrar tudo o que sinto por você não somente com ações, mas com palavras também — não apenas por ser Dia dos Namorados,<br> 
+mas porque você é o meu amor. E mesmo depois de momentos difíceis, seguimos em frente e realizamos cada vez mais coisas como casal. <br>
+Espero que você goste dos presentes. <br> <br>
+Com amor, Rikelmy ❤️  
+            </p>
+            <h2 class="section-title">Para Você</h2>
+            <div class="music-quote">
+            <p>"Nesses mesmos dias, nesses mesmos ano<br>
+                Mesmo plano, hora exata<br>
+                Você me ama e eu te amo,<br> <span style="color: rgb(255, 255, 255);">✨Alinhamento Milenar✨</span><br>
+                Você não acha?"</p> 
+                
+                <span class="song-info">Alinhamento milenar - Jão</span>
+            </div>
+            
+            <a href="https://www.youtube.com/watch?v=A42ERJlitLE&list=PLpogx1ni7GteL20Cl4IVsetnDsQrI4kk3&index=1" class="special-button" target="_blank">Clique para escutar</a>
+        </section>
+    </div>
+
+    <footer>
+        <p style="color: #ff2d75;">Feito com carinho para o meu amor</p>
+    </footer>
+
+    <script>
+        // Criar estrelas
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 2}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.setProperty('--duration', `${5 + Math.random() * 10}s`);
+            star.style.setProperty('--opacity', Math.random());
+            starsContainer.appendChild(star);
+        }
+
+        // Animação suave ao rolar
+        document.querySelectorAll('section').forEach((section) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.8s, transform 0.8s';
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
